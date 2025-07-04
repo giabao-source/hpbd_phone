@@ -1,0 +1,32 @@
+html, body {
+  margin: 0; padding: 0;
+  background: black;
+  overflow: hidden;
+  height: 100vh;
+}
+canvas {
+  display: block;
+  background: black;
+}
+
+#birthdayImage {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* ✅ THÊM đoạn này vào cuối */
+@media (max-width: 768px) {
+  #birthdayImage {
+    width: 70vw !important;
+  }
+
+  button {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+  }
+}
